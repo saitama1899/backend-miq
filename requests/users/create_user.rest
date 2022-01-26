@@ -1,0 +1,16 @@
+POST  http://localhost:3001/api/users 
+Content-Type: application/json
+
+{
+  "username": "Usuario desde Vcode requests 3",
+  "name": "Eric",
+  "password": "contraseña_eric"
+}
+ 
+###
+
+POST  http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+}
