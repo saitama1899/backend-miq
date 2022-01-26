@@ -7,7 +7,7 @@ const { server } = require ('../index.js')
 beforeEach(async () => {
   await User.deleteMany({})
 
-  const passwordHash = await bcrypt.hash('Test user', 10)
+  const passwordHash = await bcrypt.hash('Test password', 10)
   const user = new User({username: 'Test user', passwordHash})
   
   await user.save()
@@ -52,6 +52,33 @@ describe('creating a new user', () => {
     expect(result.body.errors.username.message).toContain('`username` to be unique')
     const usersAfter = await getAllUsers()
     expect(usersAfter).toHaveLength(users.length)
+  })
+})
+
+describe('user login', () => {
+  test('succeeds with correct credentials recieving a token', async () => {
+    const user = {
+      username: 'Test user',
+      password: 'Test password'
+    }
+    const result = await api
+      .post('/api/login')
+      .send(user)
+      .expect(200)
+      .expect('Content-Type', /application\/json/)
+
+    expect(result.body.token ? true : false).toBe(true)
+  })
+
+  test('fails with wrong password', async () => {
+    const user = {
+      username: 'Test user',
+      password: 'jhgj'
+    }
+     await api
+      .post('/api/login')
+      .send(user)
+      .expect(401)
   })
 })
 
