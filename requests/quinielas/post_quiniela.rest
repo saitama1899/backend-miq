@@ -1,0 +1,101 @@
+POST  http://localhost:3001/api/quinielas 
+Content-Type: application/json
+
+{
+  "p": "uououo",
+  "quiniela": {
+    "fecha_sorteo": "2022-01-30 00:00:00",
+    "dia_semana": "domingo",
+    "id_sorteo": "1153706007",
+    "game_id": "LAQU",
+    "anyo": "2022",
+    "premio_bote": "0",
+    "cdc": "11537",
+    "apuestas": "0",
+    "recaudacion": null,
+    "combinacion": null,
+    "premios": "0",
+    "fondo_bote": "0",
+    "escrutinio": [],
+    "partidos": [
+        {
+          "local": "Amorebieta",
+          "visitante": "Girona",
+          "fecha": "2022/01/29 16:00:00"
+        },
+        {
+          "local": "Cartagena",
+          "visitante": "Fuenlabrada",
+          "fecha": "2022/01/30 16:00:00"
+        },
+        {
+          "local": "Eibar",
+          "visitante": "Huesca",
+          "fecha": "2022/01/29 18:15:00"
+        },
+        {
+          "local": "Leganés",
+          "visitante": "Alcorcón",
+          "fecha": "2022/01/30 14:00:00"
+        },
+        {
+          "local": "Las Palmas",
+          "visitante": "Real Sociedad B",
+          "fecha": "2022/01/30 18:15:00"
+        },
+        {
+          "local": "Lugo",
+          "visitante": "Burgos",
+          "fecha": "2022/01/29 18:15:00"
+        },
+        {
+          "local": "Mirandés",
+          "visitante": "Málaga",
+          "fecha": "2022/01/30 18:15:00"
+        },
+        {
+          "local": "Ponferradina",
+          "visitante": "Tenerife",
+          "fecha": "2022/01/30 21:00:00"
+        },
+        {
+          "local": "Ross County",
+          "visitante": "Glasgow Rangers",
+          "fecha": "2022/01/29 13:30:00"
+        },
+        {
+          "local": "Aberdeen",
+          "visitante": "St. Johnstone",
+          "fecha": "2022/01/29 16:00:00"
+        },
+        {
+          "local": "Celtic",
+          "visitante": "Dundee United",
+          "fecha": "2022/01/29 16:00:00"
+        },
+        {
+          "local": "Dundee",
+          "visitante": "St. Mirren",
+          "fecha": "2022/01/29 16:00:00"
+        },
+        {
+          "local": "Hearts",
+          "visitante": "Motherwell",
+          "fecha": "2022/01/29 16:00:00"
+        },
+        {
+          "local": "Hibernian",
+          "visitante": "Livingston",
+          "fecha": "2022/01/29 16:00:00"
+        },
+        {
+          "local": "R. Oviedo",
+          "visitante": "Almería",
+          "fecha": "2022/01/29 21:00:00"
+        }
+    ],
+    "temporada": "2021-2022",
+    "jornada": "35"
+  }
+}
+ 
