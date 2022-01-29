@@ -5,6 +5,7 @@ module.exports = (req, res, next) => {
   const authorization = req.get('authorization')
   let token = null
 
+  // Hay que arreglar un error no controlado si recibes un token de un usuario inexistente
   if (authorization && authorization.toLocaleLowerCase().startsWith('bearer')) {
     token = authorization.substring(7)
   }

@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose')
-const uniqueValidator = require('mongoose-unique-validator')
+// const uniqueValidator = require('mongoose-unique-validator')
 
 // Usamos el unique en username para definir que sea unico
 const userSchema = new Schema({
@@ -8,7 +8,11 @@ const userSchema = new Schema({
     unique: true
   },
   name: String,
-  passwordHash: String
+  passwordHash: String,
+  apuestas: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Apuesta'
+  }]
 })
 
 // Con esto modificamos los campos que devolverá la DB para mostrarlos modificados u ocultar algunos
@@ -22,7 +26,7 @@ userSchema.set('toJSON', {
   }
 })
 
-userSchema.plugin(uniqueValidator)
+// userSchema.plugin(uniqueValidator)
 const User = model('User', userSchema)
 
 module.exports = User

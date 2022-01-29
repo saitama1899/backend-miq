@@ -17,6 +17,7 @@ require('./middleware/quinielaUpdater')
 const usersRouter = require('./controllers/users')
 const loginRouter = require('./controllers/login')
 const quinielasRouter = require('./controllers/quinielas')
+const apuestasRouter = require('./controllers/apuestas')
 
 const app = express()
 // CORS por defecto permitirá que tu api funcione para cualquier origen
@@ -33,6 +34,7 @@ app.get('/', (req, res) => {
 app.use('/api/users', usersRouter)
 app.use('/api/login', loginRouter)
 app.use('/api/quinielas', quinielasRouter)
+app.use('/api/apuestas', apuestasRouter)
 
 // Aqui solo llegará si no entra en ninguna de las de arriba
 app.use(notFound)

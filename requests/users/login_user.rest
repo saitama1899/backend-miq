@@ -2,7 +2,7 @@ POST  http://localhost:3001/api/login
 Content-Type: application/json
 
 {
-  "username": "Usuario desde Vcode requests",
+  "username": "Otro usuario",
   "password": "contraseña_eric"
 }
  

@@ -1,0 +1,15 @@
+POST  http://localhost:3001/api/apuestas 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZjNlOTdmMmE0ZjQ0Njc5NjFkODI3YyIsInVzZXJuYW1lIjoiT3RybyB1c3VhcmlvIiwiaWF0IjoxNjQzMzkyMDExLCJleHAiOjE2NDM5OTY4MTF9.zX3UoyXH8XiyHdgWP3scwSWhK_ISx23Kfm5IUoePJhk
+
+{
+  "content": "X - X - 1 - 1 - 2 - 1 - X - 1 -X - X - 1 - 1 - 2 - 1 - X1"
+}
+
+###
+
+POST  http://localhost:3001/api/apuestas 
+Content-Type: application/json
+
+{
+}
