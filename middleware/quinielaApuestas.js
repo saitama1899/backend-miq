@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 const urlApiOficial = 'https://www.loteriasyapuestas.es/servicios/fechav3'
-const end = new Date('02/20/2022')
+const end = new Date('02/20/2030')
 
 const sendGetRequest = async (date) => {
   const params = {

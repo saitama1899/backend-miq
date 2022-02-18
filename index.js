@@ -28,9 +28,9 @@ app.use(express.json())
 
 app.use(logger)
 
-app.get('/', (req, res) => {
-  res.send('<h1>Hola mundo!</h1>')
-})
+// Para servir nuestra app (frontend) desde la api (servidor backend)
+app.use(express.static('../app/build'))
+
 app.use('/api/users', usersRouter)
 app.use('/api/login', loginRouter)
 app.use('/api/quinielas', quinielasRouter)

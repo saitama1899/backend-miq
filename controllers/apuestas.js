@@ -6,9 +6,11 @@ const userExtractor = require('../middleware/userExtractor')
 
 // GET todas las apuestas de un usuario
 apuestasRouter.get('/', userExtractor, async (req, res) => {
-  const apuestas = await Apuesta.find({})
-    .populate('user', { username: 1, name: 1 })
+  const { userId } = req
+  const apuestas = await Apuesta.find({user: userId})
+    // .populate('user', { username: 1, name: 1 })
     .populate('quiniela', { fecha_sorteo: 1, id_sorteo: 1, partidos: 1 })
+    .limit(1)
   res.json(apuestas)
 })
 
@@ -45,15 +47,16 @@ apuestasRouter.post('/', userExtractor, async (req, res, next) => {
   } catch (e) { next(e) }
 })
 
+// Apuestas por ID
 apuestasRouter.get('/:id', userExtractor, async (req, res) => {
   const { id } = req.params
 
   try {
-    const note = await Apuesta.findById(id).populate('user', {
+    const apuesta = await Apuesta.findById(id).populate('user', {
       username: 1,
       name: 1
     })
-    res.json(note)
+    res.json(apuesta)
   } catch (e) {
     res.status(404).end()
     console.error(e)

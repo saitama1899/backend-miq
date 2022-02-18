@@ -1,4 +1,5 @@
 // const getQuiniela = require('../middleware/quinielaApuestas')
+
 // const Quiniela = require('../models/Quiniela')
 // const axios = require('axios')
 
@@ -20,6 +21,9 @@
 //   } catch (e) { console.error(e.response.data.error) }
 // }
 
+// // TODO Funcion para update resultados, busqueda en DB de todas las quinielas con el campo
+// // combinacion vacio, salvo la última
+
 // setInterval(() => {
-// quinielaUpdate()
+//   quinielaUpdate()
 // }, 10000)

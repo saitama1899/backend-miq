@@ -17,6 +17,7 @@ quinielasRouter.post('/', async (req, res, next) => {
       const savedQuiniela = await quinielaToSave.save()
       res.status(201).json(savedQuiniela)
     } catch (e) {
+      console.error(e)
       res.status(400)
       next(e)
     }

@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose')
-const uniqueValidator = require('mongoose-unique-validator')
 
 const quinielaSchema = new Schema({
   fecha_sorteo: Date,
@@ -23,7 +22,6 @@ const quinielaSchema = new Schema({
   jornada: String
 })
 
-quinielaSchema.plugin(uniqueValidator)
 const Quiniela = model('Quiniela', quinielaSchema)
 
 module.exports = Quiniela
